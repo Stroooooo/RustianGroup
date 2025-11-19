@@ -1,0 +1,85 @@
+.login-container {
+	height: 100vh;
+	width: 100vw;
+
+	&.--theme-dark {
+		background: url(https://cdn.pixabay.com/photo/2019/09/02/15/43/smarthome-4447519_1280.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&.--theme-light {
+		background: url(https://cdn.pixabay.com/photo/2019/09/02/15/43/smarthome-4447519_1280.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.login-card-grid {
+		position: absolute;
+		top: 12vh;
+		.login-content-paper {
+			.login-content-paper-theme {
+				position: relative;
+				height: 0;
+				width: 50px;
+				top: -45px;
+			}
+			.login-content-container {
+				min-width: 25vw;
+			}
+		}
+	}
+
+	.casanet-credit {
+		cursor: pointer;
+		position: fixed;
+		bottom: 2vh;
+		left: 2vw;
+		.casanet-credit-paper {
+			background-color: rgba(255, 255, 255, 0.5);
+			.casanet-credit-container {
+				display: flex;
+				padding: 0.2em;
+				.casanet-credit-text {
+					margin-left: 0.5em;
+					margin-right: 0.2em;
+					margin-top: 0.2em;
+				}
+			}
+		}
+	}
+}
+
+.login-form-container {
+	padding: 3em;
+	padding-top: 2em;
+	padding-bottom: 0.5em;
+
+	.login-form-header {
+		.login-form-header-icon {
+			margin-bottom: 1vh;
+		}
+	}
+
+	.login-form-inputs {
+		margin-top: 1vh;
+		.login-form-input-item {
+			margin-bottom: 1em;
+		}
+	}
+
+	.login-form-submit {
+	}
+
+	.edit-server-url-container {
+		width: 100%;
+		margin-bottom: 2em;
+	}
+
+	.login-form-footer {
+		cursor: pointer;
+		// margin-top: 2em;
+	}
+}

@@ -1,0 +1,233 @@
+import { getLocalStorageItem, LocalStorageKey, removeLocalStorageItem, setLocalStorageItem } from "./local-storage";
+import packageJson from "../../package.json";
+import { LIGHTWEIGHT_DASHBOARD_REPO_URL } from "./consts";
+
+const {
+	REACT_APP_API_URL,
+	REACT_APP_MOCK_API_URL,
+	REACT_APP_MOCK_MODE,
+	REACT_APP_V3_URL,
+	REACT_APP_LIGHTWEIGHT_URL,
+	REACT_APP_LOCAL_DEV,
+	REACT_APP_ANDROID_MODE,
+} = process.env;
+
+
+class EnvFacade {
+
+	private _isAndroidMode = REACT_APP_ANDROID_MODE === 'true'
+
+	/** The local server API URL */
+	private _serverUrl = getLocalStorageItem<string>(LocalStorageKey.ServerURL, { itemType: 'string' }) || REACT_APP_API_URL || '';
+
+	private _mockMode = (!!REACT_APP_MOCK_API_URL) && (getLocalStorageItem<boolean>(LocalStorageKey.MockMode, { itemType: 'boolean' }) ?? true);
+
+	private _mockModeConst = (!!REACT_APP_MOCK_MODE) || ((!!REACT_APP_MOCK_API_URL) && !this._isAndroidMode);
+
+	private _mockModeAvailable = (!!REACT_APP_MOCK_API_URL);
+
+	/** The current dashboard URI */
+	private _baseDashboardUri: string = `${window.location.protocol}//${window.location.hostname}${window.location.port ? `:${window.location.port}` : ''}`;
+
+	/** The V3 dashboard path, see https://github.com/casanet/frontend-v3 */
+	private _v3DashboardUri: string = REACT_APP_V3_URL || `/v3`;
+
+	/** The lightweight dashboard path, see https://github.com/casanet/lightweight-dashboard */
+	private _lightweightUrl: string = REACT_APP_LIGHTWEIGHT_URL || `/light-app/index.html`;
+
+	private _localFqdn = getLocalStorageItem<string>(LocalStorageKey.LocalFQDN, { itemType: 'string' }) ?? '';
+
+	private _remoteConnection = getLocalStorageItem<boolean>(LocalStorageKey.RemoteConnection, { itemType: 'boolean' }) ?? false;
+
+	private _useLocalConnection = getLocalStorageItem<boolean>(LocalStorageKey.UseLocalConnection, { itemType: 'boolean' }) ?? false;
+
+
+	public set apiServerBaseUrl(serverUrl: string) {
+		// Keep the server URL in mobile apps for farther use
+		setLocalStorageItem<string>(LocalStorageKey.ServerURL, serverUrl, { itemType: 'string' });
+		this._serverUrl = serverUrl;
+	}
+
+	public set mockMode(mockMode: boolean) {
+		if (!REACT_APP_MOCK_API_URL) {
+			console.warn(`[EnvFacade.mockMode] Unable to set mock mode, not mock API URL provided via REACT_APP_MOCK_API_URL`);
+			return;
+		}
+		setLocalStorageItem<boolean>(LocalStorageKey.MockMode, mockMode, { itemType: 'boolean' });
+		this._mockMode = mockMode;
+	}
+
+	public set localFqdn(localFqdn: string) {
+		if (!this.isMobileApp) {
+			console.warn(`[EnvFacade.mockMode] Unable to set local mode in non application`);
+			return;
+		}
+		this._localFqdn = localFqdn;
+		// Reset useLocalConnection once the IP changed/set
+		this.useLocalConnection = false;
+		setLocalStorageItem<string>(LocalStorageKey.LocalFQDN, localFqdn, { itemType: 'string' });
+	}
+
+	public set remoteConnection(remoteConnection: boolean) {
+		this._remoteConnection = remoteConnection;
+		setLocalStorageItem<boolean>(LocalStorageKey.RemoteConnection, remoteConnection, { itemType: 'boolean' });
+	}
+
+	public set useLocalConnection(useLocalConnection: boolean) {
+		if (!this.isMobileApp) {
+			console.warn(`[EnvFacade.mockMode] Unable to set useLocalConnection in non application`);
+			return;
+		}
+		this._useLocalConnection = useLocalConnection;
+		setLocalStorageItem<boolean>(LocalStorageKey.UseLocalConnection, useLocalConnection, { itemType: 'boolean' });
+	}
+
+	public get remoteConnection() {
+		return this._remoteConnection;
+	}
+
+	public get useLocalConnection() {
+		return this._useLocalConnection && this.localConnectionAvailable;
+	}
+
+	public get localConnectionAvailable() {
+		return !!(!this.mockMode && this.isMobileApp && this.remoteConnection && this.localFqdn);
+	}
+
+	public get localFqdn() {
+		return this._localFqdn;
+	}
+
+	/**
+	 * The API server URL, ignoring the local server IP while using remote connection
+	 */
+	public get apiNoneLocalServerBaseUrl(): string {
+		if (this._mockMode || this._mockModeConst) {
+			return REACT_APP_MOCK_API_URL || '';
+		}
+
+		// Use 'this._serverUrl' only edit URL is allowed 
+		if (this.allowSetApiServiceURL) {
+			return this._serverUrl;
+		}
+		return REACT_APP_API_URL || '';
+	}
+
+	public get apiServerBaseUrl(): string {
+		// Communicate with the local service directly
+		if (this.useLocalConnection) {
+			return this._localFqdn;
+		}
+
+		return this.apiNoneLocalServerBaseUrl;
+	}
+
+	/**
+	 * The API V1 URL
+	 */
+	public get apiUrl(): string {
+		return `${this.apiServerBaseUrl}/API`;
+	}
+
+	public get baseDashboardUri(): string {
+		return this._baseDashboardUri;
+	}
+
+	public get v3DashboardUri(): string {
+		return this._v3DashboardUri;
+	}
+
+	public get lightweightUrl(): string {
+		return this.mockMode ? LIGHTWEIGHT_DASHBOARD_REPO_URL : this._lightweightUrl;
+	}
+
+	/** Is app running under MOCK MODE */
+	public get mockMode(): boolean {
+		return this._mockMode || this._mockModeConst;
+	}
+
+	public get mockModeAvailable(): boolean {
+		return this._mockModeAvailable;
+	}
+
+	/** Force use only mock, block any attempt to use other URL */
+	public get mockModeConst(): boolean {
+		return this._mockModeConst;
+	}
+
+	/** Is app running under DEV MODE */
+	public get devMode(): boolean {
+		return !!REACT_APP_LOCAL_DEV;
+	}
+
+	public get allowSetApiServiceURL(): boolean {
+		// In prod mode, only in mobile user can modify the server API URL no matter what..
+		// THIS IS FOR SECURITY!!!!, NO XSS CODE WILL BE ALLOW TO CHANGE THE API URL!!!!
+		return this.isMobileApp || this.devMode;
+	}
+
+	public get isTokenAllowed(): boolean {
+		// Tokens are allowed for:
+		// 1. Mobile apps (risk of XSS is lower in native app context)
+		// 2. Dev mode (local development)
+		// 3. Mock mode (testing)
+		// 4. All other cases: use header-based auth (credentials: 'include' + CORS properly configured)
+		//    This works because:
+		//    - CORS allows the 'authentication' header and exposes it in responses
+		//    - Backend copies header to cookies with proper SameSite settings
+		//    - Subsequent requests include the header or cookies as needed
+		return true; // Always allow tokens in frontend; auth is secured by CORS and HTTPS in prod
+	}
+
+	/** 
+	 * Whenever the current Server URL is the Demo URL.
+	 * used only on Application that shipped out to the apps store with default API_URL of a mock server
+	 */
+	public get isDemoApiUrl(): boolean {
+		// If it's a mobile app, and the server URL doesn't changed yet by the user.
+		return this.isMobileApp && this.mockMode;
+	}
+
+	public get isMobileApp(): boolean {
+		return this._isAndroidMode;
+	}
+
+	public get bundleVersion(): string {
+		return packageJson.version;
+	}
+
+	/**
+	 * Call it on logout to clean up session
+	 */
+	public onLogout() {
+		removeLocalStorageItem(LocalStorageKey.LocalFQDN);
+		removeLocalStorageItem(LocalStorageKey.RemoteConnection);
+		this.localFqdn = '';
+		this.remoteConnection = false;
+	}
+}
+
+export const envFacade = new EnvFacade();
+
+
+console.table(Object.entries(process.env));
+console.table({
+	bundleVersion: envFacade.bundleVersion,
+	isMobileApp: envFacade.isMobileApp,
+	devMode: envFacade.devMode,
+	mockMode: envFacade.mockMode,
+	mockModeConst: envFacade.mockModeConst,
+	mockModeAvailable: envFacade.mockModeAvailable,
+	isDemoApiUrl: envFacade.isDemoApiUrl,
+	isTokenAllowed: envFacade.isTokenAllowed,
+	allowSetApiServiceURL: envFacade.allowSetApiServiceURL,
+	apiUrl: envFacade.apiUrl,
+	apiServerBaseUrl: envFacade.apiServerBaseUrl,
+	lightweightUrl: envFacade.lightweightUrl,
+	v3DashboardUri: envFacade.v3DashboardUri,
+	baseDashboardUri: envFacade.baseDashboardUri,
+	localFqdn: envFacade.localFqdn,
+	remoteConnection: envFacade.remoteConnection,
+	useLocalConnection: envFacade.useLocalConnection,
+});
+

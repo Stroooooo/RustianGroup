@@ -1,0 +1,199 @@
+name: casanet dashboard app CI CD
+
+on: [push, workflow_dispatch]
+
+env:
+  SKIP_PREFLIGHT_CHECK: "true"    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install node
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+  
+    - name: Prepare dependencies
+      run: |
+        npm i -g yarn
+        yarn install --frozen-lockfile
+
+    - name: Bomb Version # Auto Update patch in main branch
+      id: bomb_version
+      if: github.ref == 'refs/heads/main'
+      run: |
+          npm run patch_version
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          echo $PACKAGE_VERSION
+          echo "PACKAGE_VERSION=$PACKAGE_VERSION" >> $GITHUB_OUTPUT
+  
+    - name: Commit and push changes # Commit version update
+      if: github.ref == 'refs/heads/main'
+      uses: devops-infra/action-commit-push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: Bomb version to ${{ steps.bomb_version.outputs.PACKAGE_VERSION }} [ci skip]"
+
+    - name: Configure DEV MODE # Set assets to build for DEV mode
+      if: github.ref != 'refs/heads/main'
+      run: |
+          npm run dev_mode
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: 17
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v2
+    - name: Bundle Android APP
+      env:
+        REACT_APP_API_URL: '${{ secrets.API_URL }}'
+        REACT_APP_MOCK_API_URL: '${{ secrets.API_URL_DEMO }}'
+        REACT_APP_V3_URL: '${{ secrets.V3_URL_APP }}'
+        REACT_APP_LIGHTWEIGHT_URL: '${{ secrets.LIGHTWEIGHT_URL }}'
+        CASANET_KEY_STORE: '${{ secrets.CASANET_KEY_STORE }}'
+        CASANET_KEY_ALIAS: '${{ secrets.CASANET_KEY_ALIAS }}'
+        CASANET_KEY_PASSWORD: '${{ secrets.CASANET_KEY_PASSWORD }}'
+        BUILD_PATH: www
+      run: |
+        export BRANCH=${GITHUB_REF##*/}
+        if [[ $BRANCH == 'main' ]]; then export REACT_APP_SHOW_VERSION_COMMIT='false' ; else export REACT_APP_SHOW_VERSION_COMMIT='true'; fi
+        if [[ $BRANCH == 'main' ]]; then export BUILD_TYPE='release' ; else export BUILD_TYPE='debug'; fi
+        export REACT_APP_ANDROID_MODE='true'
+        yarn run build
+        npm i -g cordova
+        node scripts/decode-key-store.js
+        cordova platform add android
+        cordova build android --$BUILD_TYPE -- --keystore=casanet-key-store.jks --storePassword=$CASANET_KEY_PASSWORD --alias=$CASANET_KEY_ALIAS --password=$CASANET_KEY_PASSWORD --packageType=bundle
+        cordova build android --$BUILD_TYPE -- --keystore=casanet-key-store.jks --storePassword=$CASANET_KEY_PASSWORD --alias=$CASANET_KEY_ALIAS --password=$CASANET_KEY_PASSWORD --packageType=apk
+        mkdir android
+        cp platforms/android/app/build/outputs/bundle/$BUILD_TYPE/app-$BUILD_TYPE.aab android/app-$BUILD_TYPE.aab
+        cp platforms/android/app/build/outputs/apk/$BUILD_TYPE/app-$BUILD_TYPE.apk android/app-$BUILD_TYPE.apk
+        export REACT_APP_ANDROID_MODE='false'
+    - uses: actions/upload-artifact@v4
+      with:
+        name: android
+        path: android
+
+    - name: Bundle www # The assets build for the public CDN
+      env:
+        BUILD_PATH: www
+        API_URL_PROD: '${{ secrets.API_URL }}'
+        API_URL_DEV: '${{ secrets.API_URL_DEV }}'
+        V3_URL_PROD: '${{ secrets.V3_URL }}'
+        V3_URL_DEV: '${{ secrets.V3_URL_DEV }}'
+        LIGHTWEIGHT_URL_PROD: '${{ secrets.LIGHTWEIGHT_URL }}'
+        LIGHTWEIGHT_URL_DEV: '${{ secrets.LIGHTWEIGHT_URL_DEV }}'
+      run: |
+        export BRANCH=${GITHUB_REF##*/}
+        if [[ $BRANCH == 'main' ]]; then export REACT_APP_API_URL=$API_URL_PROD ; else export REACT_APP_API_URL=$API_URL_DEV; fi
+        if [[ $BRANCH == 'main' ]]; then export REACT_APP_V3_URL=$V3_URL_PROD ; else export REACT_APP_V3_URL=$V3_URL_DEV; fi
+        if [[ $BRANCH == 'main' ]]; then export REACT_APP_LIGHTWEIGHT_URL=$LIGHTWEIGHT_URL_PROD ; else export REACT_APP_LIGHTWEIGHT_URL=$LIGHTWEIGHT_URL_DEV; fi
+        if [[ $BRANCH == 'main' ]]; then export REACT_APP_SHOW_VERSION_COMMIT='false' ; else export REACT_APP_SHOW_VERSION_COMMIT='true'; fi
+        yarn run build
+    - uses: actions/upload-artifact@v4
+      with:
+        name: www
+        path: www
+    
+    - name: Bundle internal # The assets build for the local server, the api server is just ''
+      env:
+        REACT_APP_API_URL: ''
+        REACT_APP_V3_URL: ''
+        REACT_APP_LIGHTWEIGHT_URL: ''
+        BUILD_PATH: internal
+      run: |
+        export BRANCH=${GITHUB_REF##*/}
+        if [[ $BRANCH == 'main' ]]; then export REACT_APP_SHOW_VERSION_COMMIT='false' ; else export REACT_APP_SHOW_VERSION_COMMIT='true'; fi
+        yarn run build
+    - uses: actions/upload-artifact@v4
+      with:
+        name: internal 
+        path: internal
+  
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - uses: actions/download-artifact@v4
+    - name: Install node
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Run-Test
+      run: |
+        export PORT="9090"
+        export REACT_APP_MOCK_API_URL="http://localhost:9090"
+        export REACT_APP_API_URL="http://localhost:9090"
+        export FRONT_SERVE_PORT="3001"
+        export BUILD_PATH="temp-e2e"
+        export REACT_APP_MOCK_MODE="true"
+        export REACT_APP_LOCAL_DEV="true"
+        echo "Installing dependencies"
+        npm i -g yarn
+        yarn
+        echo "Preparing mock assets"
+        npm run prepare_mock
+        npm run build
+        echo "Run mock server"
+        node -v
+        cd temp-mock/mock-server
+        node index.js &
+        cd ../..
+        node node_modules/http-server/bin/http-server ./temp-e2e -p $FRONT_SERVE_PORT &
+        echo "Run tests"
+        npm run test
+
+  release:
+    needs: build 
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - uses: actions/download-artifact@v4
+      with:
+        name: android
+        path: android
+
+    - name: Version Info
+      id: version_info
+      # "Build" the release title and text body from the latest pushed commit, then pull the version bombed version for the release version  
+      run: |
+        title=$(git log -1 --pretty=%B | sed -n '1p')
+        echo "TITLE=$title" >> $GITHUB_OUTPUT
+        body=$(git log -1 --pretty=%B | sed 1d)
+        body="${body//'%'/'%25'}"
+        body="${body//$'\n'/'%0A'}"
+        body="${body//$'\r'/'%0D'}"
+        echo "BODY=$body" >> $GITHUB_OUTPUT
+        git pull
+        version=$(node -p "require('./package.json').version")
+        echo "VERSION=$version" >> $GITHUB_OUTPUT
+    - name: Create Release
+      id: create_release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          tag_name: ${{ steps.version_info.outputs.VERSION }}
+          name: ${{ steps.version_info.outputs.TITLE }}
+          body: ${{ steps.version_info.outputs.BODY }}
+          draft: false
+          prerelease: false
+          files: |
+            ./android/app-release.aab
+            ./android/app-release.apk

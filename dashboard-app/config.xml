@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="casa.casanet.dashboard" version="1.0.45" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>casanet</name>
+	<description>
+        Cadasnet IoT Control Dashboard
+    </description>
+	<author email="haim.kastner@gmail.com" href="https://github.com/haimkastner">
+				Haim Kastner
+    </author>
+	<content src="index.html"/>
+	<access origin="*"/>
+	<allow-intent href="*"/>
+	<allow-intent href="http://*/*"/>
+	<allow-intent href="https://*/*"/>
+	<allow-intent href="tel:*"/>
+	<allow-intent href="sms:*"/>
+	<allow-intent href="mailto:*"/>
+	<allow-intent href="geo:*"/>
+	<platform name="android">
+		<preference name="scheme" value="http"/>
+		<edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+			<application android:usesCleartextTraffic="true"/>
+		</edit-config>
+		<allow-intent href="market:*"/>
+		<icon density="ldpi" src="assets/icons/android/drawable-ldpi-icon.png"/>
+		<icon density="mdpi" src="assets/icons/android/drawable-mdpi-icon.png"/>
+		<icon density="hdpi" src="assets/icons/android/drawable-hdpi-icon.png"/>
+		<icon density="xhdpi" src="assets/icons/android/drawable-xhdpi-icon.png"/>
+		<icon density="xxhdpi" src="assets/icons/android/drawable-xxhdpi-icon.png"/>
+		<icon density="xxxhdpi" src="assets/icons/android/drawable-xxxhdpi-icon.png"/>
+		<preference name="AndroidWindowSplashScreenAnimatedIcon" value="assets/icons/android/splash.png"/>
+	</platform>
+	<platform name="ios">
+		<allow-intent href="itms:*"/>
+		<allow-intent href="itms-apps:*"/>
+	</platform>
+</widget>

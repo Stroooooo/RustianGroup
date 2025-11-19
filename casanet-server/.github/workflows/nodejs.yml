@@ -1,0 +1,142 @@
+name: casanet server CI CD
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Update version patch
+      if: github.ref == 'refs/heads/master'
+      id: update_version
+      run: |
+          cd backend
+          version=$(npm --no-git-tag-version --tag-version-prefix= version patch)
+          cd ..
+          echo $version > version.txt
+          echo $version
+          echo "VERSION=$version" >> $GITHUB_OUTPUT
+
+    - name: Commit and push changes
+      if: github.ref == 'refs/heads/master'
+      uses: devops-infra/action-commit-push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: Update to version ${{ steps.update_version.outputs.VERSION }} [skip-ci]
+    - name: Bundle packages
+      # NOTE, the default ARMV bin (v16.12.0) not exists in the "https://github.com/vercel/pkg-fetch/releases" page, so download V16.8 and replace name and hash to build using it 
+      run: |
+        export BRANCH=${GITHUB_REF##*/}
+        mkdir casanet_bin
+        mkdir .pkg-cache
+        cd .pkg-cache
+        export PKG_CACHE_PATH=$(pwd)
+        echo $PKG_CACHE_PATH
+        mkdir v3.4
+        cd v3.4
+        curl -L https://github.com/vercel/pkg-fetch/releases/download/v3.4/node-v16.16.0-linuxstatic-armv7 --output fetched-v16.16.0-linux-armv7 
+        chmod 777 fetched-v16.16.0-linux-armv7
+        cd ../../
+        cd backend
+        npm i -g yarn
+        yarn --frozen-lockfile
+        sed -i 's/node-v16.16.0-linuxstatic-armv7/node-v16.16.0-linux-armv7/g' node_modules/pkg-fetch/lib-es5/expected.js
+        sed -i 's/e26b713c159d38b09ba8db95e4c8220653386aad7bc6ec0921f6b6b20f4710c5/cbe14ff111fd3d1ecb82cf6aaec5a53588537008fdcfab4bc2c880d651f5580a/g' node_modules/pkg-fetch/lib-es5/expected.js
+        npm run bundle
+        cp dist/generated/swagger.json ../casanet_bin/swagger.json
+        cp -v bundle/* ../casanet_bin
+    - uses: actions/upload-artifact@v4
+      with:
+        name: casanet_bin 
+        path: casanet_bin
+    - uses: actions/upload-artifact@v4
+      with:
+        name: swagger-spec 
+        path: backend/dist/generated/swagger.json
+
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
+    if: github.ref != 'refs/heads/master'
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: test backend
+      run: |
+        cd backend
+        npm i -g yarn
+        yarn --frozen-lockfile
+        npm run test
+
+  release:
+    needs: build 
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
+    if: github.ref == 'refs/heads/master'
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    - uses: actions/download-artifact@master
+      with:
+        name: casanet_bin
+        path: casanet_bin
+    - name: Get the version
+      id: get_version
+      run: |
+        cd backend
+        version=$(npm --no-git-tag-version --tag-version-prefix= version patch)
+        cd ..
+        echo $version > version.txt
+        echo "VERSION=$version" >> $GITHUB_OUTPUT
+        title=$(git log -1 --pretty=%B | sed -n '1p')
+        echo "TITLE=$title" >> $GITHUB_OUTPUT
+        body=$(git log -1 --pretty=%B | sed 1d)
+        body="${body//'%'/'%25'}"
+        body="${body//$'\n'/'%0A'}"
+        body="${body//$'\r'/'%0D'}"
+        echo "BODY=$body" >> $GITHUB_OUTPUT
+  
+    - name: Create Release
+      id: create_release
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.get_version.outputs.VERSION }}
+        name: ${{ steps.get_version.outputs.TITLE }}
+        body: ${{ steps.get_version.outputs.BODY }}
+        draft: false
+        prerelease: true
+        files: |
+          ./casanet_bin/casanet_linux_arm
+          ./casanet_bin/casanet_win_x64.exe
+          ./casanet_bin/casanet_linux_x64
+          ./casanet_bin/casanet.json
+          ./casanet_bin/swagger.json
+
+    - name: Upload Spec To Hub # And finally all ready to upload new spec version to swagger hub
+      env:
+        SWAGGERHUB_API_KEY: '${{ secrets.SWAGGERHUB_API_KEY }}' # Export the SWAGGERHUB_API_KEY secret as environment variable, use to auth publish request
+        API_SERVER_URL: '${{ secrets.API_SERVER_URL }}' # Export the API_SERVER_URL secret as environment variable, used to set the API Server URL to the published spec.
+      run: | # Update the spec with the API Server URL
+        node ./backend/scripts/set-spec-server.js ./casanet_bin/swagger.json $API_SERVER_URL
+        npx swaggerhub-cli api:create haimkastner/casanet-local-server --file ./casanet_bin/swagger.json --published=publish --visibility=public --setdefault
+ 

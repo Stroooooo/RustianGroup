@@ -1,3 +1,7 @@
+networks:
+  casanet:
+    driver: bridge
+
 services:
   web:
     build:
@@ -5,12 +9,26 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - "3000:3000"
+    environment:
+      - MQTT_BROKER_URI=mqtt://mqtt:1883
+    networks:
+      - casanet
+    depends_on:
+      - mqtt
     restart: always
-    
+
   api:
     build: ./casanet-server/backend
     ports:
       - "8080:8080"
+    env_file:
+      - ./casanet-server/backend/.env
+    environment:
+      - MQTT_BROKER_URI=mqtt://mqtt:1883
+    networks:
+      - casanet
+    depends_on:
+      - mqtt
     restart: always
 
   mqtt:
@@ -22,8 +40,16 @@ services:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+    networks:
+      - casanet
     restart: always
-    
+    healthcheck:
+      test: ["CMD", "mosquitto_sub", "-t", "$SYS/#", "-C", "1", "-i", "healthcheck", "-W", "3"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
   nginx:
     image: nginx:latest
     ports:
@@ -31,7 +57,10 @@ services:
       - "443:443"
     volumes:
       - ./nginx:/etc/nginx:ro
+    networks:
+      - casanet
     depends_on:
       - web
       - api
+      - mqtt
     restart: always

@@ -31,7 +31,7 @@
     "lint:fix": "tslint --fix -p tsconfig.json",
     "jscopy": "copyfiles -u 1 src/**/*.js dist && node ./scripts/copySwaggerAssets.js",
     "build": "tsoa routes && tsoa swagger && tsc && npm run jscopy && npm run build-version",
-    "serve": "npm run build && node dist/index.js",
+    "dev": "npm run build && node dist/index.js",
     "build:prod": "npm run format && npm run lint && npm run build",
     "test:unit": "del-cli data/test -f && npm run build && cross-env NODE_ENV=test mocha --exit --require ts-node/register tests/unit/**/*.spec.ts",
     "test:e2e": "del-cli data/test -f && npm run build && cross-env NODE_ENV=test mocha --exit --require ts-node/register tests/e2e/**/*.spec.ts",

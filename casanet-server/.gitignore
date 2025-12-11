@@ -5,5 +5,3 @@ dist/
 logs/
 coverage
 .nyc_output
-
-generated/

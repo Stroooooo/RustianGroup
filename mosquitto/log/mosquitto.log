@@ -1321,3 +1321,1315 @@
 1764843795: Sending PINGRESP to mqttjs_63d9fe55
 1764843795: Received DISCONNECT from healthcheck
 1764843795: Client healthcheck disconnected.
+1765451540: mosquitto version 2.0.22 starting
+1765451540: Config loaded from /mosquitto/config/mosquitto.conf.
+1765451540: Opening ipv4 listen socket on port 1883.
+1765451540: mosquitto version 2.0.22 running
+1765451545: New connection from 127.0.0.1:49866 on port 1883.
+1765451545: New client connected from 127.0.0.1:49866 as healthcheck (p2, c1, k60).
+1765451545: No will message specified.
+1765451545: Sending CONNACK to healthcheck (0, 0)
+1765451545: Received SUBSCRIBE from healthcheck
+1765451545: 	/# (QoS 0)
+1765451545: healthcheck 0 /#
+1765451545: Sending SUBACK to healthcheck
+1765451547: New connection from 172.18.0.3:42414 on port 1883.
+1765451547: New client connected from 172.18.0.3:42414 as mqttjs_ba20ed01 (p2, c1, k60).
+1765451547: No will message specified.
+1765451547: Sending CONNACK to mqttjs_ba20ed01 (0, 0)
+1765451547: Received SUBSCRIBE from mqttjs_ba20ed01
+1765451547: 	casanet/state/+ (QoS 0)
+1765451547: mqttjs_ba20ed01 0 casanet/state/+
+1765451547: Sending SUBACK to mqttjs_ba20ed01
+1765451547: Received SUBSCRIBE from mqttjs_ba20ed01
+1765451547: 	shellies/+/relay/0 (QoS 0)
+1765451547: mqttjs_ba20ed01 0 shellies/+/relay/0
+1765451547: 	shellies/+/color/0/status (QoS 0)
+1765451547: mqttjs_ba20ed01 0 shellies/+/color/0/status
+1765451547: 	shellies/+/input_event/0 (QoS 0)
+1765451547: mqttjs_ba20ed01 0 shellies/+/input_event/0
+1765451547: 	shellies/+/sensor/battery (QoS 0)
+1765451547: mqttjs_ba20ed01 0 shellies/+/sensor/battery
+1765451547: 	shellies/+/sensor/charger (QoS 0)
+1765451547: mqttjs_ba20ed01 0 shellies/+/sensor/charger
+1765451547: 	shellies/+/ext_temperature/+ (QoS 0)
+1765451547: mqttjs_ba20ed01 0 shellies/+/ext_temperature/+
+1765451547: Sending SUBACK to mqttjs_ba20ed01
+1765451547: Received SUBSCRIBE from mqttjs_ba20ed01
+1765451547: 	stat/+/RESULT (QoS 0)
+1765451547: mqttjs_ba20ed01 0 stat/+/RESULT
+1765451547: Sending SUBACK to mqttjs_ba20ed01
+1765451548: Received DISCONNECT from healthcheck
+1765451548: Client healthcheck disconnected.
+1765451553: New connection from 127.0.0.1:52882 on port 1883.
+1765451553: New client connected from 127.0.0.1:52882 as healthcheck (p2, c1, k60).
+1765451553: No will message specified.
+1765451553: Sending CONNACK to healthcheck (0, 0)
+1765451553: Received SUBSCRIBE from healthcheck
+1765451553: 	/# (QoS 0)
+1765451553: healthcheck 0 /#
+1765451553: Sending SUBACK to healthcheck
+1765451556: Received DISCONNECT from healthcheck
+1765451556: Client healthcheck disconnected.
+1765451566: New connection from 127.0.0.1:38802 on port 1883.
+1765451566: New client connected from 127.0.0.1:38802 as healthcheck (p2, c1, k60).
+1765451566: No will message specified.
+1765451566: Sending CONNACK to healthcheck (0, 0)
+1765451566: Received SUBSCRIBE from healthcheck
+1765451566: 	/# (QoS 0)
+1765451566: healthcheck 0 /#
+1765451566: Sending SUBACK to healthcheck
+1765451569: Received DISCONNECT from healthcheck
+1765451569: Client healthcheck disconnected.
+1765451579: New connection from 127.0.0.1:44476 on port 1883.
+1765451579: New client connected from 127.0.0.1:44476 as healthcheck (p2, c1, k60).
+1765451579: No will message specified.
+1765451579: Sending CONNACK to healthcheck (0, 0)
+1765451579: Received SUBSCRIBE from healthcheck
+1765451579: 	/# (QoS 0)
+1765451579: healthcheck 0 /#
+1765451579: Sending SUBACK to healthcheck
+1765451582: Received DISCONNECT from healthcheck
+1765451582: Client healthcheck disconnected.
+1765451592: New connection from 127.0.0.1:36746 on port 1883.
+1765451592: New client connected from 127.0.0.1:36746 as healthcheck (p2, c1, k60).
+1765451592: No will message specified.
+1765451592: Sending CONNACK to healthcheck (0, 0)
+1765451592: Received SUBSCRIBE from healthcheck
+1765451592: 	/# (QoS 0)
+1765451592: healthcheck 0 /#
+1765451592: Sending SUBACK to healthcheck
+1765451595: Received DISCONNECT from healthcheck
+1765451595: Client healthcheck disconnected.
+1765451605: New connection from 127.0.0.1:50810 on port 1883.
+1765451605: New client connected from 127.0.0.1:50810 as healthcheck (p2, c1, k60).
+1765451605: No will message specified.
+1765451605: Sending CONNACK to healthcheck (0, 0)
+1765451605: Received SUBSCRIBE from healthcheck
+1765451605: 	/# (QoS 0)
+1765451605: healthcheck 0 /#
+1765451605: Sending SUBACK to healthcheck
+1765451607: Received PINGREQ from mqttjs_ba20ed01
+1765451607: Sending PINGRESP to mqttjs_ba20ed01
+1765451608: Received DISCONNECT from healthcheck
+1765451608: Client healthcheck disconnected.
+1765451822: New connection from 127.0.0.1:59022 on port 1883.
+1765451822: New client connected from 127.0.0.1:59022 as healthcheck (p2, c1, k60).
+1765451822: No will message specified.
+1765451822: Sending CONNACK to healthcheck (0, 0)
+1765451822: Received SUBSCRIBE from healthcheck
+1765451822: 	/# (QoS 0)
+1765451822: healthcheck 0 /#
+1765451822: Sending SUBACK to healthcheck
+1765451825: Received DISCONNECT from healthcheck
+1765451825: Client healthcheck disconnected.
+1765451835: New connection from 127.0.0.1:53206 on port 1883.
+1765451835: New client connected from 127.0.0.1:53206 as healthcheck (p2, c1, k60).
+1765451835: No will message specified.
+1765451835: Sending CONNACK to healthcheck (0, 0)
+1765451835: Received SUBSCRIBE from healthcheck
+1765451835: 	/# (QoS 0)
+1765451835: healthcheck 0 /#
+1765451835: Sending SUBACK to healthcheck
+1765451838: Received DISCONNECT from healthcheck
+1765451838: Client healthcheck disconnected.
+1765451848: New connection from 127.0.0.1:53628 on port 1883.
+1765451848: New client connected from 127.0.0.1:53628 as healthcheck (p2, c1, k60).
+1765451848: No will message specified.
+1765451848: Sending CONNACK to healthcheck (0, 0)
+1765451848: Received SUBSCRIBE from healthcheck
+1765451848: 	/# (QoS 0)
+1765451848: healthcheck 0 /#
+1765451848: Sending SUBACK to healthcheck
+1765451851: Received DISCONNECT from healthcheck
+1765451851: Client healthcheck disconnected.
+1765451861: New connection from 127.0.0.1:37232 on port 1883.
+1765451861: New client connected from 127.0.0.1:37232 as healthcheck (p2, c1, k60).
+1765451861: No will message specified.
+1765451861: Sending CONNACK to healthcheck (0, 0)
+1765451861: Received SUBSCRIBE from healthcheck
+1765451861: 	/# (QoS 0)
+1765451861: healthcheck 0 /#
+1765451861: Sending SUBACK to healthcheck
+1765451864: Received DISCONNECT from healthcheck
+1765451864: Client healthcheck disconnected.
+1765451871: Received PINGREQ from mqttjs_ba20ed01
+1765451871: Sending PINGRESP to mqttjs_ba20ed01
+1765451874: New connection from 127.0.0.1:36904 on port 1883.
+1765451874: New client connected from 127.0.0.1:36904 as healthcheck (p2, c1, k60).
+1765451874: No will message specified.
+1765451874: Sending CONNACK to healthcheck (0, 0)
+1765451874: Received SUBSCRIBE from healthcheck
+1765451874: 	/# (QoS 0)
+1765451874: healthcheck 0 /#
+1765451874: Sending SUBACK to healthcheck
+1765451877: Received DISCONNECT from healthcheck
+1765451877: Client healthcheck disconnected.
+1765451887: New connection from 127.0.0.1:36618 on port 1883.
+1765451887: New client connected from 127.0.0.1:36618 as healthcheck (p2, c1, k60).
+1765451887: No will message specified.
+1765451887: Sending CONNACK to healthcheck (0, 0)
+1765451887: Received SUBSCRIBE from healthcheck
+1765451887: 	/# (QoS 0)
+1765451887: healthcheck 0 /#
+1765451887: Sending SUBACK to healthcheck
+1765451890: Received DISCONNECT from healthcheck
+1765451890: Client healthcheck disconnected.
+1765451900: New connection from 127.0.0.1:53488 on port 1883.
+1765451900: New client connected from 127.0.0.1:53488 as healthcheck (p2, c1, k60).
+1765451900: No will message specified.
+1765451900: Sending CONNACK to healthcheck (0, 0)
+1765451900: Received SUBSCRIBE from healthcheck
+1765451900: 	/# (QoS 0)
+1765451900: healthcheck 0 /#
+1765451900: Sending SUBACK to healthcheck
+1765451903: Received DISCONNECT from healthcheck
+1765451903: Client healthcheck disconnected.
+1765451913: New connection from 127.0.0.1:35996 on port 1883.
+1765451913: New client connected from 127.0.0.1:35996 as healthcheck (p2, c1, k60).
+1765451913: No will message specified.
+1765451913: Sending CONNACK to healthcheck (0, 0)
+1765451913: Received SUBSCRIBE from healthcheck
+1765451913: 	/# (QoS 0)
+1765451913: healthcheck 0 /#
+1765451913: Sending SUBACK to healthcheck
+1765451916: Received DISCONNECT from healthcheck
+1765451916: Client healthcheck disconnected.
+1765451926: New connection from 127.0.0.1:53434 on port 1883.
+1765451926: New client connected from 127.0.0.1:53434 as healthcheck (p2, c1, k60).
+1765451926: No will message specified.
+1765451926: Sending CONNACK to healthcheck (0, 0)
+1765451926: Received SUBSCRIBE from healthcheck
+1765451926: 	/# (QoS 0)
+1765451926: healthcheck 0 /#
+1765451926: Sending SUBACK to healthcheck
+1765451929: Received DISCONNECT from healthcheck
+1765451929: Client healthcheck disconnected.
+1765451931: Received PINGREQ from mqttjs_ba20ed01
+1765451931: Sending PINGRESP to mqttjs_ba20ed01
+1765451939: New connection from 127.0.0.1:57562 on port 1883.
+1765451939: New client connected from 127.0.0.1:57562 as healthcheck (p2, c1, k60).
+1765451939: No will message specified.
+1765451939: Sending CONNACK to healthcheck (0, 0)
+1765451939: Received SUBSCRIBE from healthcheck
+1765451939: 	/# (QoS 0)
+1765451939: healthcheck 0 /#
+1765451939: Sending SUBACK to healthcheck
+1765451942: Received DISCONNECT from healthcheck
+1765451942: Client healthcheck disconnected.
+1765451952: New connection from 127.0.0.1:56712 on port 1883.
+1765451952: New client connected from 127.0.0.1:56712 as healthcheck (p2, c1, k60).
+1765451952: No will message specified.
+1765451952: Sending CONNACK to healthcheck (0, 0)
+1765451952: Received SUBSCRIBE from healthcheck
+1765451952: 	/# (QoS 0)
+1765451952: healthcheck 0 /#
+1765451952: Sending SUBACK to healthcheck
+1765451955: Received DISCONNECT from healthcheck
+1765451955: Client healthcheck disconnected.
+1765451965: New connection from 127.0.0.1:42884 on port 1883.
+1765451965: New client connected from 127.0.0.1:42884 as healthcheck (p2, c1, k60).
+1765451965: No will message specified.
+1765451965: Sending CONNACK to healthcheck (0, 0)
+1765451965: Received SUBSCRIBE from healthcheck
+1765451965: 	/# (QoS 0)
+1765451965: healthcheck 0 /#
+1765451965: Sending SUBACK to healthcheck
+1765451968: Received DISCONNECT from healthcheck
+1765451968: Client healthcheck disconnected.
+1765451978: New connection from 127.0.0.1:44574 on port 1883.
+1765451978: New client connected from 127.0.0.1:44574 as healthcheck (p2, c1, k60).
+1765451978: No will message specified.
+1765451978: Sending CONNACK to healthcheck (0, 0)
+1765451978: Received SUBSCRIBE from healthcheck
+1765451978: 	/# (QoS 0)
+1765451978: healthcheck 0 /#
+1765451978: Sending SUBACK to healthcheck
+1765451981: Received DISCONNECT from healthcheck
+1765451981: Client healthcheck disconnected.
+1765451991: Received PINGREQ from mqttjs_ba20ed01
+1765451991: Sending PINGRESP to mqttjs_ba20ed01
+1765451991: New connection from 127.0.0.1:46248 on port 1883.
+1765451991: New client connected from 127.0.0.1:46248 as healthcheck (p2, c1, k60).
+1765451991: No will message specified.
+1765451991: Sending CONNACK to healthcheck (0, 0)
+1765451991: Received SUBSCRIBE from healthcheck
+1765451991: 	/# (QoS 0)
+1765451991: healthcheck 0 /#
+1765451991: Sending SUBACK to healthcheck
+1765451994: Received DISCONNECT from healthcheck
+1765451994: Client healthcheck disconnected.
+1765452004: New connection from 127.0.0.1:50996 on port 1883.
+1765452004: New client connected from 127.0.0.1:50996 as healthcheck (p2, c1, k60).
+1765452004: No will message specified.
+1765452004: Sending CONNACK to healthcheck (0, 0)
+1765452004: Received SUBSCRIBE from healthcheck
+1765452004: 	/# (QoS 0)
+1765452004: healthcheck 0 /#
+1765452004: Sending SUBACK to healthcheck
+1765452007: Received DISCONNECT from healthcheck
+1765452007: Client healthcheck disconnected.
+1765452018: New connection from 127.0.0.1:47814 on port 1883.
+1765452018: New client connected from 127.0.0.1:47814 as healthcheck (p2, c1, k60).
+1765452018: No will message specified.
+1765452018: Sending CONNACK to healthcheck (0, 0)
+1765452018: Received SUBSCRIBE from healthcheck
+1765452018: 	/# (QoS 0)
+1765452018: healthcheck 0 /#
+1765452018: Sending SUBACK to healthcheck
+1765452021: Received DISCONNECT from healthcheck
+1765452021: Client healthcheck disconnected.
+1765452031: New connection from 127.0.0.1:43374 on port 1883.
+1765452031: New client connected from 127.0.0.1:43374 as healthcheck (p2, c1, k60).
+1765452031: No will message specified.
+1765452031: Sending CONNACK to healthcheck (0, 0)
+1765452031: Received SUBSCRIBE from healthcheck
+1765452031: 	/# (QoS 0)
+1765452031: healthcheck 0 /#
+1765452031: Sending SUBACK to healthcheck
+1765452034: Received DISCONNECT from healthcheck
+1765452034: Client healthcheck disconnected.
+1765452044: New connection from 127.0.0.1:39796 on port 1883.
+1765452044: New client connected from 127.0.0.1:39796 as healthcheck (p2, c1, k60).
+1765452044: No will message specified.
+1765452044: Sending CONNACK to healthcheck (0, 0)
+1765452044: Received SUBSCRIBE from healthcheck
+1765452044: 	/# (QoS 0)
+1765452044: healthcheck 0 /#
+1765452044: Sending SUBACK to healthcheck
+1765452047: Received DISCONNECT from healthcheck
+1765452047: Client healthcheck disconnected.
+1765452051: Received PINGREQ from mqttjs_ba20ed01
+1765452051: Sending PINGRESP to mqttjs_ba20ed01
+1765452057: New connection from 127.0.0.1:48008 on port 1883.
+1765452057: New client connected from 127.0.0.1:48008 as healthcheck (p2, c1, k60).
+1765452057: No will message specified.
+1765452057: Sending CONNACK to healthcheck (0, 0)
+1765452057: Received SUBSCRIBE from healthcheck
+1765452057: 	/# (QoS 0)
+1765452057: healthcheck 0 /#
+1765452057: Sending SUBACK to healthcheck
+1765452079: Received DISCONNECT from healthcheck
+1765452079: Client healthcheck disconnected.
+1765452089: New connection from 127.0.0.1:53464 on port 1883.
+1765452089: New client connected from 127.0.0.1:53464 as healthcheck (p2, c1, k60).
+1765452089: No will message specified.
+1765452089: Sending CONNACK to healthcheck (0, 0)
+1765452089: Received SUBSCRIBE from healthcheck
+1765452089: 	/# (QoS 0)
+1765452089: healthcheck 0 /#
+1765452089: Sending SUBACK to healthcheck
+1765452092: Received DISCONNECT from healthcheck
+1765452092: Client healthcheck disconnected.
+1765452102: New connection from 127.0.0.1:55256 on port 1883.
+1765452102: New client connected from 127.0.0.1:55256 as healthcheck (p2, c1, k60).
+1765452102: No will message specified.
+1765452102: Sending CONNACK to healthcheck (0, 0)
+1765452102: Received SUBSCRIBE from healthcheck
+1765452102: 	/# (QoS 0)
+1765452102: healthcheck 0 /#
+1765452102: Sending SUBACK to healthcheck
+1765452105: Received DISCONNECT from healthcheck
+1765452105: Client healthcheck disconnected.
+1765452115: New connection from 127.0.0.1:54498 on port 1883.
+1765452115: New client connected from 127.0.0.1:54498 as healthcheck (p2, c1, k60).
+1765452115: No will message specified.
+1765452115: Sending CONNACK to healthcheck (0, 0)
+1765452115: Received SUBSCRIBE from healthcheck
+1765452115: 	/# (QoS 0)
+1765452115: healthcheck 0 /#
+1765452115: Sending SUBACK to healthcheck
+1765452118: Received DISCONNECT from healthcheck
+1765452118: Client healthcheck disconnected.
+1765452128: New connection from 127.0.0.1:39016 on port 1883.
+1765452128: New client connected from 127.0.0.1:39016 as healthcheck (p2, c1, k60).
+1765452128: No will message specified.
+1765452128: Sending CONNACK to healthcheck (0, 0)
+1765452128: Received SUBSCRIBE from healthcheck
+1765452128: 	/# (QoS 0)
+1765452128: healthcheck 0 /#
+1765452128: Sending SUBACK to healthcheck
+1765452130: Received PINGREQ from mqttjs_ba20ed01
+1765452130: Sending PINGRESP to mqttjs_ba20ed01
+1765452131: Received DISCONNECT from healthcheck
+1765452131: Client healthcheck disconnected.
+1765452141: New connection from 127.0.0.1:33736 on port 1883.
+1765452141: New client connected from 127.0.0.1:33736 as healthcheck (p2, c1, k60).
+1765452141: No will message specified.
+1765452141: Sending CONNACK to healthcheck (0, 0)
+1765452141: Received SUBSCRIBE from healthcheck
+1765452141: 	/# (QoS 0)
+1765452141: healthcheck 0 /#
+1765452141: Sending SUBACK to healthcheck
+1765452144: Received DISCONNECT from healthcheck
+1765452144: Client healthcheck disconnected.
+1765452154: New connection from 127.0.0.1:52870 on port 1883.
+1765452154: New client connected from 127.0.0.1:52870 as healthcheck (p2, c1, k60).
+1765452154: No will message specified.
+1765452154: Sending CONNACK to healthcheck (0, 0)
+1765452154: Received SUBSCRIBE from healthcheck
+1765452154: 	/# (QoS 0)
+1765452154: healthcheck 0 /#
+1765452154: Sending SUBACK to healthcheck
+1765452157: Received DISCONNECT from healthcheck
+1765452157: Client healthcheck disconnected.
+1765452167: New connection from 127.0.0.1:44686 on port 1883.
+1765452167: New client connected from 127.0.0.1:44686 as healthcheck (p2, c1, k60).
+1765452167: No will message specified.
+1765452167: Sending CONNACK to healthcheck (0, 0)
+1765452167: Received SUBSCRIBE from healthcheck
+1765452167: 	/# (QoS 0)
+1765452167: healthcheck 0 /#
+1765452167: Sending SUBACK to healthcheck
+1765452170: Received DISCONNECT from healthcheck
+1765452170: Client healthcheck disconnected.
+1765452180: New connection from 127.0.0.1:46354 on port 1883.
+1765452180: New client connected from 127.0.0.1:46354 as healthcheck (p2, c1, k60).
+1765452180: No will message specified.
+1765452180: Sending CONNACK to healthcheck (0, 0)
+1765452180: Received SUBSCRIBE from healthcheck
+1765452180: 	/# (QoS 0)
+1765452180: healthcheck 0 /#
+1765452180: Sending SUBACK to healthcheck
+1765452183: Received DISCONNECT from healthcheck
+1765452183: Client healthcheck disconnected.
+1765452190: Received PINGREQ from mqttjs_ba20ed01
+1765452190: Sending PINGRESP to mqttjs_ba20ed01
+1765452193: New connection from 127.0.0.1:46584 on port 1883.
+1765452193: New client connected from 127.0.0.1:46584 as healthcheck (p2, c1, k60).
+1765452193: No will message specified.
+1765452193: Sending CONNACK to healthcheck (0, 0)
+1765452193: Received SUBSCRIBE from healthcheck
+1765452193: 	/# (QoS 0)
+1765452193: healthcheck 0 /#
+1765452193: Sending SUBACK to healthcheck
+1765452196: Received DISCONNECT from healthcheck
+1765452196: Client healthcheck disconnected.
+1765452207: New connection from 127.0.0.1:50282 on port 1883.
+1765452207: New client connected from 127.0.0.1:50282 as healthcheck (p2, c1, k60).
+1765452207: No will message specified.
+1765452207: Sending CONNACK to healthcheck (0, 0)
+1765452207: Received SUBSCRIBE from healthcheck
+1765452207: 	/# (QoS 0)
+1765452207: healthcheck 0 /#
+1765452207: Sending SUBACK to healthcheck
+1765452210: Received DISCONNECT from healthcheck
+1765452210: Client healthcheck disconnected.
+1765452220: New connection from 127.0.0.1:56660 on port 1883.
+1765452220: New client connected from 127.0.0.1:56660 as healthcheck (p2, c1, k60).
+1765452220: No will message specified.
+1765452220: Sending CONNACK to healthcheck (0, 0)
+1765452220: Received SUBSCRIBE from healthcheck
+1765452220: 	/# (QoS 0)
+1765452220: healthcheck 0 /#
+1765452220: Sending SUBACK to healthcheck
+1765452223: Received DISCONNECT from healthcheck
+1765452223: Client healthcheck disconnected.
+1765452233: New connection from 127.0.0.1:42802 on port 1883.
+1765452233: New client connected from 127.0.0.1:42802 as healthcheck (p2, c1, k60).
+1765452233: No will message specified.
+1765452233: Sending CONNACK to healthcheck (0, 0)
+1765452233: Received SUBSCRIBE from healthcheck
+1765452233: 	/# (QoS 0)
+1765452233: healthcheck 0 /#
+1765452233: Sending SUBACK to healthcheck
+1765452236: Received DISCONNECT from healthcheck
+1765452236: Client healthcheck disconnected.
+1765452246: New connection from 127.0.0.1:55062 on port 1883.
+1765452246: New client connected from 127.0.0.1:55062 as healthcheck (p2, c1, k60).
+1765452246: No will message specified.
+1765452246: Sending CONNACK to healthcheck (0, 0)
+1765452246: Received SUBSCRIBE from healthcheck
+1765452246: 	/# (QoS 0)
+1765452246: healthcheck 0 /#
+1765452246: Sending SUBACK to healthcheck
+1765452249: Received DISCONNECT from healthcheck
+1765452249: Client healthcheck disconnected.
+1765452250: Received PINGREQ from mqttjs_ba20ed01
+1765452250: Sending PINGRESP to mqttjs_ba20ed01
+1765452259: New connection from 127.0.0.1:45494 on port 1883.
+1765452259: New client connected from 127.0.0.1:45494 as healthcheck (p2, c1, k60).
+1765452259: No will message specified.
+1765452259: Sending CONNACK to healthcheck (0, 0)
+1765452259: Received SUBSCRIBE from healthcheck
+1765452259: 	/# (QoS 0)
+1765452259: healthcheck 0 /#
+1765452259: Sending SUBACK to healthcheck
+1765452262: Received DISCONNECT from healthcheck
+1765452262: Client healthcheck disconnected.
+1765452272: New connection from 127.0.0.1:36678 on port 1883.
+1765452272: New client connected from 127.0.0.1:36678 as healthcheck (p2, c1, k60).
+1765452272: No will message specified.
+1765452272: Sending CONNACK to healthcheck (0, 0)
+1765452272: Received SUBSCRIBE from healthcheck
+1765452272: 	/# (QoS 0)
+1765452272: healthcheck 0 /#
+1765452272: Sending SUBACK to healthcheck
+1765452275: Received DISCONNECT from healthcheck
+1765452275: Client healthcheck disconnected.
+1765452285: New connection from 127.0.0.1:37906 on port 1883.
+1765452285: New client connected from 127.0.0.1:37906 as healthcheck (p2, c1, k60).
+1765452285: No will message specified.
+1765452285: Sending CONNACK to healthcheck (0, 0)
+1765452285: Received SUBSCRIBE from healthcheck
+1765452285: 	/# (QoS 0)
+1765452285: healthcheck 0 /#
+1765452285: Sending SUBACK to healthcheck
+1765452288: Received DISCONNECT from healthcheck
+1765452288: Client healthcheck disconnected.
+1765452298: New connection from 127.0.0.1:41320 on port 1883.
+1765452298: New client connected from 127.0.0.1:41320 as healthcheck (p2, c1, k60).
+1765452298: No will message specified.
+1765452298: Sending CONNACK to healthcheck (0, 0)
+1765452298: Received SUBSCRIBE from healthcheck
+1765452298: 	/# (QoS 0)
+1765452298: healthcheck 0 /#
+1765452298: Sending SUBACK to healthcheck
+1765452301: Received DISCONNECT from healthcheck
+1765452301: Client healthcheck disconnected.
+1765452310: Received PINGREQ from mqttjs_ba20ed01
+1765452310: Sending PINGRESP to mqttjs_ba20ed01
+1765452311: New connection from 127.0.0.1:35474 on port 1883.
+1765452311: New client connected from 127.0.0.1:35474 as healthcheck (p2, c1, k60).
+1765452311: No will message specified.
+1765452311: Sending CONNACK to healthcheck (0, 0)
+1765452311: Received SUBSCRIBE from healthcheck
+1765452311: 	/# (QoS 0)
+1765452311: healthcheck 0 /#
+1765452311: Sending SUBACK to healthcheck
+1765452314: Received DISCONNECT from healthcheck
+1765452314: Client healthcheck disconnected.
+1765452324: New connection from 127.0.0.1:52862 on port 1883.
+1765452324: New client connected from 127.0.0.1:52862 as healthcheck (p2, c1, k60).
+1765452324: No will message specified.
+1765452324: Sending CONNACK to healthcheck (0, 0)
+1765452324: Received SUBSCRIBE from healthcheck
+1765452324: 	/# (QoS 0)
+1765452324: healthcheck 0 /#
+1765452324: Sending SUBACK to healthcheck
+1765452327: Received DISCONNECT from healthcheck
+1765452327: Client healthcheck disconnected.
+1765452337: New connection from 127.0.0.1:54276 on port 1883.
+1765452337: New client connected from 127.0.0.1:54276 as healthcheck (p2, c1, k60).
+1765452337: No will message specified.
+1765452337: Sending CONNACK to healthcheck (0, 0)
+1765452337: Received SUBSCRIBE from healthcheck
+1765452337: 	/# (QoS 0)
+1765452337: healthcheck 0 /#
+1765452337: Sending SUBACK to healthcheck
+1765452340: Received DISCONNECT from healthcheck
+1765452340: Client healthcheck disconnected.
+1765452350: New connection from 127.0.0.1:60430 on port 1883.
+1765452350: New client connected from 127.0.0.1:60430 as healthcheck (p2, c1, k60).
+1765452350: No will message specified.
+1765452350: Sending CONNACK to healthcheck (0, 0)
+1765452350: Received SUBSCRIBE from healthcheck
+1765452350: 	/# (QoS 0)
+1765452350: healthcheck 0 /#
+1765452350: Sending SUBACK to healthcheck
+1765452353: Received DISCONNECT from healthcheck
+1765452353: Client healthcheck disconnected.
+1765452363: New connection from 127.0.0.1:42286 on port 1883.
+1765452363: New client connected from 127.0.0.1:42286 as healthcheck (p2, c1, k60).
+1765452363: No will message specified.
+1765452363: Sending CONNACK to healthcheck (0, 0)
+1765452363: Received SUBSCRIBE from healthcheck
+1765452363: 	/# (QoS 0)
+1765452363: healthcheck 0 /#
+1765452363: Sending SUBACK to healthcheck
+1765452366: Received DISCONNECT from healthcheck
+1765452366: Client healthcheck disconnected.
+1765452370: Received PINGREQ from mqttjs_ba20ed01
+1765452370: Sending PINGRESP to mqttjs_ba20ed01
+1765452376: New connection from 127.0.0.1:53004 on port 1883.
+1765452376: New client connected from 127.0.0.1:53004 as healthcheck (p2, c1, k60).
+1765452376: No will message specified.
+1765452376: Sending CONNACK to healthcheck (0, 0)
+1765452376: Received SUBSCRIBE from healthcheck
+1765452376: 	/# (QoS 0)
+1765452376: healthcheck 0 /#
+1765452376: Sending SUBACK to healthcheck
+1765452379: Received DISCONNECT from healthcheck
+1765452379: Client healthcheck disconnected.
+1765452389: New connection from 127.0.0.1:41588 on port 1883.
+1765452389: New client connected from 127.0.0.1:41588 as healthcheck (p2, c1, k60).
+1765452389: No will message specified.
+1765452389: Sending CONNACK to healthcheck (0, 0)
+1765452389: Received SUBSCRIBE from healthcheck
+1765452389: 	/# (QoS 0)
+1765452389: healthcheck 0 /#
+1765452389: Sending SUBACK to healthcheck
+1765452392: Received DISCONNECT from healthcheck
+1765452392: Client healthcheck disconnected.
+1765452403: New connection from 127.0.0.1:51986 on port 1883.
+1765452403: New client connected from 127.0.0.1:51986 as healthcheck (p2, c1, k60).
+1765452403: No will message specified.
+1765452403: Sending CONNACK to healthcheck (0, 0)
+1765452403: Received SUBSCRIBE from healthcheck
+1765452403: 	/# (QoS 0)
+1765452403: healthcheck 0 /#
+1765452403: Sending SUBACK to healthcheck
+1765452406: Received DISCONNECT from healthcheck
+1765452406: Client healthcheck disconnected.
+1765452416: New connection from 127.0.0.1:39738 on port 1883.
+1765452416: New client connected from 127.0.0.1:39738 as healthcheck (p2, c1, k60).
+1765452416: No will message specified.
+1765452416: Sending CONNACK to healthcheck (0, 0)
+1765452416: Received SUBSCRIBE from healthcheck
+1765452416: 	/# (QoS 0)
+1765452416: healthcheck 0 /#
+1765452416: Sending SUBACK to healthcheck
+1765452419: Received DISCONNECT from healthcheck
+1765452419: Client healthcheck disconnected.
+1765452429: New connection from 127.0.0.1:33368 on port 1883.
+1765452429: New client connected from 127.0.0.1:33368 as healthcheck (p2, c1, k60).
+1765452429: No will message specified.
+1765452429: Sending CONNACK to healthcheck (0, 0)
+1765452429: Received SUBSCRIBE from healthcheck
+1765452429: 	/# (QoS 0)
+1765452429: healthcheck 0 /#
+1765452429: Sending SUBACK to healthcheck
+1765452430: Received PINGREQ from mqttjs_ba20ed01
+1765452430: Sending PINGRESP to mqttjs_ba20ed01
+1765452432: Received DISCONNECT from healthcheck
+1765452432: Client healthcheck disconnected.
+1765452442: New connection from 127.0.0.1:52874 on port 1883.
+1765452442: New client connected from 127.0.0.1:52874 as healthcheck (p2, c1, k60).
+1765452442: No will message specified.
+1765452442: Sending CONNACK to healthcheck (0, 0)
+1765452442: Received SUBSCRIBE from healthcheck
+1765452442: 	/# (QoS 0)
+1765452442: healthcheck 0 /#
+1765452442: Sending SUBACK to healthcheck
+1765452445: Received DISCONNECT from healthcheck
+1765452445: Client healthcheck disconnected.
+1765452455: New connection from 127.0.0.1:53286 on port 1883.
+1765452455: New client connected from 127.0.0.1:53286 as healthcheck (p2, c1, k60).
+1765452455: No will message specified.
+1765452455: Sending CONNACK to healthcheck (0, 0)
+1765452455: Received SUBSCRIBE from healthcheck
+1765452455: 	/# (QoS 0)
+1765452455: healthcheck 0 /#
+1765452455: Sending SUBACK to healthcheck
+1765452458: Received DISCONNECT from healthcheck
+1765452458: Client healthcheck disconnected.
+1765452468: New connection from 127.0.0.1:41718 on port 1883.
+1765452468: New client connected from 127.0.0.1:41718 as healthcheck (p2, c1, k60).
+1765452468: No will message specified.
+1765452468: Sending CONNACK to healthcheck (0, 0)
+1765452468: Received SUBSCRIBE from healthcheck
+1765452468: 	/# (QoS 0)
+1765452468: healthcheck 0 /#
+1765452468: Sending SUBACK to healthcheck
+1765452471: Received DISCONNECT from healthcheck
+1765452471: Client healthcheck disconnected.
+1765452481: New connection from 127.0.0.1:59436 on port 1883.
+1765452481: New client connected from 127.0.0.1:59436 as healthcheck (p2, c1, k60).
+1765452481: No will message specified.
+1765452481: Sending CONNACK to healthcheck (0, 0)
+1765452481: Received SUBSCRIBE from healthcheck
+1765452481: 	/# (QoS 0)
+1765452481: healthcheck 0 /#
+1765452481: Sending SUBACK to healthcheck
+1765452484: Received DISCONNECT from healthcheck
+1765452484: Client healthcheck disconnected.
+1765452490: Received PINGREQ from mqttjs_ba20ed01
+1765452490: Sending PINGRESP to mqttjs_ba20ed01
+1765452494: New connection from 127.0.0.1:45242 on port 1883.
+1765452494: New client connected from 127.0.0.1:45242 as healthcheck (p2, c1, k60).
+1765452494: No will message specified.
+1765452494: Sending CONNACK to healthcheck (0, 0)
+1765452494: Received SUBSCRIBE from healthcheck
+1765452494: 	/# (QoS 0)
+1765452494: healthcheck 0 /#
+1765452494: Sending SUBACK to healthcheck
+1765452497: Received DISCONNECT from healthcheck
+1765452497: Client healthcheck disconnected.
+1765452507: New connection from 127.0.0.1:51884 on port 1883.
+1765452507: New client connected from 127.0.0.1:51884 as healthcheck (p2, c1, k60).
+1765452507: No will message specified.
+1765452507: Sending CONNACK to healthcheck (0, 0)
+1765452507: Received SUBSCRIBE from healthcheck
+1765452507: 	/# (QoS 0)
+1765452507: healthcheck 0 /#
+1765452507: Sending SUBACK to healthcheck
+1765452510: Received DISCONNECT from healthcheck
+1765452510: Client healthcheck disconnected.
+1765452520: New connection from 127.0.0.1:39080 on port 1883.
+1765452520: New client connected from 127.0.0.1:39080 as healthcheck (p2, c1, k60).
+1765452520: No will message specified.
+1765452520: Sending CONNACK to healthcheck (0, 0)
+1765452520: Received SUBSCRIBE from healthcheck
+1765452520: 	/# (QoS 0)
+1765452520: healthcheck 0 /#
+1765452520: Sending SUBACK to healthcheck
+1765452523: Received DISCONNECT from healthcheck
+1765452523: Client healthcheck disconnected.
+1765452533: New connection from 127.0.0.1:32866 on port 1883.
+1765452533: New client connected from 127.0.0.1:32866 as healthcheck (p2, c1, k60).
+1765452533: No will message specified.
+1765452533: Sending CONNACK to healthcheck (0, 0)
+1765452533: Received SUBSCRIBE from healthcheck
+1765452533: 	/# (QoS 0)
+1765452533: healthcheck 0 /#
+1765452533: Sending SUBACK to healthcheck
+1765452536: Received DISCONNECT from healthcheck
+1765452536: Client healthcheck disconnected.
+1765452546: New connection from 127.0.0.1:36878 on port 1883.
+1765452546: New client connected from 127.0.0.1:36878 as healthcheck (p2, c1, k60).
+1765452546: No will message specified.
+1765452546: Sending CONNACK to healthcheck (0, 0)
+1765452546: Received SUBSCRIBE from healthcheck
+1765452546: 	/# (QoS 0)
+1765452546: healthcheck 0 /#
+1765452546: Sending SUBACK to healthcheck
+1765452549: Received DISCONNECT from healthcheck
+1765452549: Client healthcheck disconnected.
+1765452550: Received PINGREQ from mqttjs_ba20ed01
+1765452550: Sending PINGRESP to mqttjs_ba20ed01
+1765452559: New connection from 127.0.0.1:48926 on port 1883.
+1765452559: New client connected from 127.0.0.1:48926 as healthcheck (p2, c1, k60).
+1765452559: No will message specified.
+1765452559: Sending CONNACK to healthcheck (0, 0)
+1765452559: Received SUBSCRIBE from healthcheck
+1765452559: 	/# (QoS 0)
+1765452559: healthcheck 0 /#
+1765452559: Sending SUBACK to healthcheck
+1765452562: Received DISCONNECT from healthcheck
+1765452562: Client healthcheck disconnected.
+1765452572: New connection from 127.0.0.1:47570 on port 1883.
+1765452572: New client connected from 127.0.0.1:47570 as healthcheck (p2, c1, k60).
+1765452572: No will message specified.
+1765452572: Sending CONNACK to healthcheck (0, 0)
+1765452572: Received SUBSCRIBE from healthcheck
+1765452572: 	/# (QoS 0)
+1765452572: healthcheck 0 /#
+1765452572: Sending SUBACK to healthcheck
+1765452575: Received DISCONNECT from healthcheck
+1765452575: Client healthcheck disconnected.
+1765452585: New connection from 127.0.0.1:46896 on port 1883.
+1765452585: New client connected from 127.0.0.1:46896 as healthcheck (p2, c1, k60).
+1765452585: No will message specified.
+1765452585: Sending CONNACK to healthcheck (0, 0)
+1765452585: Received SUBSCRIBE from healthcheck
+1765452585: 	/# (QoS 0)
+1765452585: healthcheck 0 /#
+1765452585: Sending SUBACK to healthcheck
+1765452588: Received DISCONNECT from healthcheck
+1765452588: Client healthcheck disconnected.
+1765452599: New connection from 127.0.0.1:53210 on port 1883.
+1765452599: New client connected from 127.0.0.1:53210 as healthcheck (p2, c1, k60).
+1765452599: No will message specified.
+1765452599: Sending CONNACK to healthcheck (0, 0)
+1765452599: Received SUBSCRIBE from healthcheck
+1765452599: 	/# (QoS 0)
+1765452599: healthcheck 0 /#
+1765452599: Sending SUBACK to healthcheck
+1765452602: Received DISCONNECT from healthcheck
+1765452602: Client healthcheck disconnected.
+1765452610: Received PINGREQ from mqttjs_ba20ed01
+1765452610: Sending PINGRESP to mqttjs_ba20ed01
+1765452612: New connection from 127.0.0.1:46880 on port 1883.
+1765452612: New client connected from 127.0.0.1:46880 as healthcheck (p2, c1, k60).
+1765452612: No will message specified.
+1765452612: Sending CONNACK to healthcheck (0, 0)
+1765452612: Received SUBSCRIBE from healthcheck
+1765452612: 	/# (QoS 0)
+1765452612: healthcheck 0 /#
+1765452612: Sending SUBACK to healthcheck
+1765452615: Received DISCONNECT from healthcheck
+1765452615: Client healthcheck disconnected.
+1765452625: New connection from 127.0.0.1:46976 on port 1883.
+1765452625: New client connected from 127.0.0.1:46976 as healthcheck (p2, c1, k60).
+1765452625: No will message specified.
+1765452625: Sending CONNACK to healthcheck (0, 0)
+1765452625: Received SUBSCRIBE from healthcheck
+1765452625: 	/# (QoS 0)
+1765452625: healthcheck 0 /#
+1765452625: Sending SUBACK to healthcheck
+1765452628: Received DISCONNECT from healthcheck
+1765452628: Client healthcheck disconnected.
+1765452638: New connection from 127.0.0.1:37404 on port 1883.
+1765452638: New client connected from 127.0.0.1:37404 as healthcheck (p2, c1, k60).
+1765452638: No will message specified.
+1765452638: Sending CONNACK to healthcheck (0, 0)
+1765452638: Received SUBSCRIBE from healthcheck
+1765452638: 	/# (QoS 0)
+1765452638: healthcheck 0 /#
+1765452638: Sending SUBACK to healthcheck
+1765452641: Received DISCONNECT from healthcheck
+1765452641: Client healthcheck disconnected.
+1765452651: New connection from 127.0.0.1:47820 on port 1883.
+1765452651: New client connected from 127.0.0.1:47820 as healthcheck (p2, c1, k60).
+1765452651: No will message specified.
+1765452651: Sending CONNACK to healthcheck (0, 0)
+1765452651: Received SUBSCRIBE from healthcheck
+1765452651: 	/# (QoS 0)
+1765452651: healthcheck 0 /#
+1765452651: Sending SUBACK to healthcheck
+1765452654: Received DISCONNECT from healthcheck
+1765452654: Client healthcheck disconnected.
+1765452664: New connection from 127.0.0.1:33152 on port 1883.
+1765452664: New client connected from 127.0.0.1:33152 as healthcheck (p2, c1, k60).
+1765452664: No will message specified.
+1765452664: Sending CONNACK to healthcheck (0, 0)
+1765452664: Received SUBSCRIBE from healthcheck
+1765452664: 	/# (QoS 0)
+1765452664: healthcheck 0 /#
+1765452664: Sending SUBACK to healthcheck
+1765452667: Received DISCONNECT from healthcheck
+1765452667: Client healthcheck disconnected.
+1765452670: Received PINGREQ from mqttjs_ba20ed01
+1765452670: Sending PINGRESP to mqttjs_ba20ed01
+1765452677: New connection from 127.0.0.1:54592 on port 1883.
+1765452677: New client connected from 127.0.0.1:54592 as healthcheck (p2, c1, k60).
+1765452677: No will message specified.
+1765452677: Sending CONNACK to healthcheck (0, 0)
+1765452677: Received SUBSCRIBE from healthcheck
+1765452677: 	/# (QoS 0)
+1765452677: healthcheck 0 /#
+1765452677: Sending SUBACK to healthcheck
+1765452680: Received DISCONNECT from healthcheck
+1765452680: Client healthcheck disconnected.
+1765452690: New connection from 127.0.0.1:47350 on port 1883.
+1765452690: New client connected from 127.0.0.1:47350 as healthcheck (p2, c1, k60).
+1765452690: No will message specified.
+1765452690: Sending CONNACK to healthcheck (0, 0)
+1765452690: Received SUBSCRIBE from healthcheck
+1765452690: 	/# (QoS 0)
+1765452690: healthcheck 0 /#
+1765452690: Sending SUBACK to healthcheck
+1765452693: Received DISCONNECT from healthcheck
+1765452693: Client healthcheck disconnected.
+1765452703: New connection from 127.0.0.1:54798 on port 1883.
+1765452703: New client connected from 127.0.0.1:54798 as healthcheck (p2, c1, k60).
+1765452703: No will message specified.
+1765452703: Sending CONNACK to healthcheck (0, 0)
+1765452703: Received SUBSCRIBE from healthcheck
+1765452703: 	/# (QoS 0)
+1765452703: healthcheck 0 /#
+1765452703: Sending SUBACK to healthcheck
+1765452706: Received DISCONNECT from healthcheck
+1765452706: Client healthcheck disconnected.
+1765452716: New connection from 127.0.0.1:58190 on port 1883.
+1765452716: New client connected from 127.0.0.1:58190 as healthcheck (p2, c1, k60).
+1765452716: No will message specified.
+1765452716: Sending CONNACK to healthcheck (0, 0)
+1765452716: Received SUBSCRIBE from healthcheck
+1765452716: 	/# (QoS 0)
+1765452716: healthcheck 0 /#
+1765452716: Sending SUBACK to healthcheck
+1765452719: Received DISCONNECT from healthcheck
+1765452719: Client healthcheck disconnected.
+1765452729: New connection from 127.0.0.1:47386 on port 1883.
+1765452729: New client connected from 127.0.0.1:47386 as healthcheck (p2, c1, k60).
+1765452729: No will message specified.
+1765452729: Sending CONNACK to healthcheck (0, 0)
+1765452729: Received SUBSCRIBE from healthcheck
+1765452729: 	/# (QoS 0)
+1765452729: healthcheck 0 /#
+1765452729: Sending SUBACK to healthcheck
+1765452730: Received PINGREQ from mqttjs_ba20ed01
+1765452730: Sending PINGRESP to mqttjs_ba20ed01
+1765452732: Received DISCONNECT from healthcheck
+1765452732: Client healthcheck disconnected.
+1765452742: New connection from 127.0.0.1:33104 on port 1883.
+1765452742: New client connected from 127.0.0.1:33104 as healthcheck (p2, c1, k60).
+1765452742: No will message specified.
+1765452742: Sending CONNACK to healthcheck (0, 0)
+1765452742: Received SUBSCRIBE from healthcheck
+1765452742: 	/# (QoS 0)
+1765452742: healthcheck 0 /#
+1765452742: Sending SUBACK to healthcheck
+1765452745: Received DISCONNECT from healthcheck
+1765452745: Client healthcheck disconnected.
+1765452755: New connection from 127.0.0.1:57150 on port 1883.
+1765452755: New client connected from 127.0.0.1:57150 as healthcheck (p2, c1, k60).
+1765452755: No will message specified.
+1765452755: Sending CONNACK to healthcheck (0, 0)
+1765452755: Received SUBSCRIBE from healthcheck
+1765452755: 	/# (QoS 0)
+1765452755: healthcheck 0 /#
+1765452755: Sending SUBACK to healthcheck
+1765452758: Received DISCONNECT from healthcheck
+1765452758: Client healthcheck disconnected.
+1765452768: New connection from 127.0.0.1:50720 on port 1883.
+1765452768: New client connected from 127.0.0.1:50720 as healthcheck (p2, c1, k60).
+1765452768: No will message specified.
+1765452768: Sending CONNACK to healthcheck (0, 0)
+1765452768: Received SUBSCRIBE from healthcheck
+1765452768: 	/# (QoS 0)
+1765452768: healthcheck 0 /#
+1765452768: Sending SUBACK to healthcheck
+1765452771: Received DISCONNECT from healthcheck
+1765452771: Client healthcheck disconnected.
+1765452781: New connection from 127.0.0.1:38458 on port 1883.
+1765452781: New client connected from 127.0.0.1:38458 as healthcheck (p2, c1, k60).
+1765452781: No will message specified.
+1765452781: Sending CONNACK to healthcheck (0, 0)
+1765452781: Received SUBSCRIBE from healthcheck
+1765452781: 	/# (QoS 0)
+1765452781: healthcheck 0 /#
+1765452781: Sending SUBACK to healthcheck
+1765452784: Received DISCONNECT from healthcheck
+1765452784: Client healthcheck disconnected.
+1765452790: Received PINGREQ from mqttjs_ba20ed01
+1765452790: Sending PINGRESP to mqttjs_ba20ed01
+1765452794: New connection from 127.0.0.1:38630 on port 1883.
+1765452794: New client connected from 127.0.0.1:38630 as healthcheck (p2, c1, k60).
+1765452794: No will message specified.
+1765452794: Sending CONNACK to healthcheck (0, 0)
+1765452794: Received SUBSCRIBE from healthcheck
+1765452794: 	/# (QoS 0)
+1765452794: healthcheck 0 /#
+1765452794: Sending SUBACK to healthcheck
+1765452797: Received DISCONNECT from healthcheck
+1765452797: Client healthcheck disconnected.
+1765452808: New connection from 127.0.0.1:49798 on port 1883.
+1765452808: New client connected from 127.0.0.1:49798 as healthcheck (p2, c1, k60).
+1765452808: No will message specified.
+1765452808: Sending CONNACK to healthcheck (0, 0)
+1765452808: Received SUBSCRIBE from healthcheck
+1765452808: 	/# (QoS 0)
+1765452808: healthcheck 0 /#
+1765452808: Sending SUBACK to healthcheck
+1765452811: Received DISCONNECT from healthcheck
+1765452811: Client healthcheck disconnected.
+1765452821: New connection from 127.0.0.1:46006 on port 1883.
+1765452821: New client connected from 127.0.0.1:46006 as healthcheck (p2, c1, k60).
+1765452821: No will message specified.
+1765452821: Sending CONNACK to healthcheck (0, 0)
+1765452821: Received SUBSCRIBE from healthcheck
+1765452821: 	/# (QoS 0)
+1765452821: healthcheck 0 /#
+1765452821: Sending SUBACK to healthcheck
+1765452824: Received DISCONNECT from healthcheck
+1765452824: Client healthcheck disconnected.
+1765452834: New connection from 127.0.0.1:41806 on port 1883.
+1765452834: New client connected from 127.0.0.1:41806 as healthcheck (p2, c1, k60).
+1765452834: No will message specified.
+1765452834: Sending CONNACK to healthcheck (0, 0)
+1765452834: Received SUBSCRIBE from healthcheck
+1765452834: 	/# (QoS 0)
+1765452834: healthcheck 0 /#
+1765452834: Sending SUBACK to healthcheck
+1765452837: Received DISCONNECT from healthcheck
+1765452837: Client healthcheck disconnected.
+1765452847: New connection from 127.0.0.1:47840 on port 1883.
+1765452847: New client connected from 127.0.0.1:47840 as healthcheck (p2, c1, k60).
+1765452847: No will message specified.
+1765452847: Sending CONNACK to healthcheck (0, 0)
+1765452847: Received SUBSCRIBE from healthcheck
+1765452847: 	/# (QoS 0)
+1765452847: healthcheck 0 /#
+1765452847: Sending SUBACK to healthcheck
+1765452850: Received DISCONNECT from healthcheck
+1765452850: Client healthcheck disconnected.
+1765452850: Received PINGREQ from mqttjs_ba20ed01
+1765452850: Sending PINGRESP to mqttjs_ba20ed01
+1765452860: New connection from 127.0.0.1:55812 on port 1883.
+1765452860: New client connected from 127.0.0.1:55812 as healthcheck (p2, c1, k60).
+1765452860: No will message specified.
+1765452860: Sending CONNACK to healthcheck (0, 0)
+1765452860: Received SUBSCRIBE from healthcheck
+1765452860: 	/# (QoS 0)
+1765452860: healthcheck 0 /#
+1765452860: Sending SUBACK to healthcheck
+1765452863: Received DISCONNECT from healthcheck
+1765452863: Client healthcheck disconnected.
+1765452873: New connection from 127.0.0.1:47890 on port 1883.
+1765452873: New client connected from 127.0.0.1:47890 as healthcheck (p2, c1, k60).
+1765452873: No will message specified.
+1765452873: Sending CONNACK to healthcheck (0, 0)
+1765452873: Received SUBSCRIBE from healthcheck
+1765452873: 	/# (QoS 0)
+1765452873: healthcheck 0 /#
+1765452873: Sending SUBACK to healthcheck
+1765452876: Received DISCONNECT from healthcheck
+1765452876: Client healthcheck disconnected.
+1765452886: New connection from 127.0.0.1:40564 on port 1883.
+1765452886: New client connected from 127.0.0.1:40564 as healthcheck (p2, c1, k60).
+1765452886: No will message specified.
+1765452886: Sending CONNACK to healthcheck (0, 0)
+1765452886: Received SUBSCRIBE from healthcheck
+1765452886: 	/# (QoS 0)
+1765452886: healthcheck 0 /#
+1765452886: Sending SUBACK to healthcheck
+1765452889: Received DISCONNECT from healthcheck
+1765452889: Client healthcheck disconnected.
+1765452899: New connection from 127.0.0.1:40904 on port 1883.
+1765452899: New client connected from 127.0.0.1:40904 as healthcheck (p2, c1, k60).
+1765452899: No will message specified.
+1765452899: Sending CONNACK to healthcheck (0, 0)
+1765452899: Received SUBSCRIBE from healthcheck
+1765452899: 	/# (QoS 0)
+1765452899: healthcheck 0 /#
+1765452899: Sending SUBACK to healthcheck
+1765452902: Received DISCONNECT from healthcheck
+1765452902: Client healthcheck disconnected.
+1765452910: Received PINGREQ from mqttjs_ba20ed01
+1765452910: Sending PINGRESP to mqttjs_ba20ed01
+1765452912: New connection from 127.0.0.1:56440 on port 1883.
+1765452912: New client connected from 127.0.0.1:56440 as healthcheck (p2, c1, k60).
+1765452912: No will message specified.
+1765452912: Sending CONNACK to healthcheck (0, 0)
+1765452912: Received SUBSCRIBE from healthcheck
+1765452912: 	/# (QoS 0)
+1765452912: healthcheck 0 /#
+1765452912: Sending SUBACK to healthcheck
+1765452915: Received DISCONNECT from healthcheck
+1765452915: Client healthcheck disconnected.
+1765452925: New connection from 127.0.0.1:56394 on port 1883.
+1765452925: New client connected from 127.0.0.1:56394 as healthcheck (p2, c1, k60).
+1765452925: No will message specified.
+1765452925: Sending CONNACK to healthcheck (0, 0)
+1765452925: Received SUBSCRIBE from healthcheck
+1765452925: 	/# (QoS 0)
+1765452925: healthcheck 0 /#
+1765452925: Sending SUBACK to healthcheck
+1765452928: Received DISCONNECT from healthcheck
+1765452928: Client healthcheck disconnected.
+1765452938: New connection from 127.0.0.1:52918 on port 1883.
+1765452938: New client connected from 127.0.0.1:52918 as healthcheck (p2, c1, k60).
+1765452938: No will message specified.
+1765452938: Sending CONNACK to healthcheck (0, 0)
+1765452938: Received SUBSCRIBE from healthcheck
+1765452938: 	/# (QoS 0)
+1765452938: healthcheck 0 /#
+1765452938: Sending SUBACK to healthcheck
+1765452941: Received DISCONNECT from healthcheck
+1765452941: Client healthcheck disconnected.
+1765452951: New connection from 127.0.0.1:38092 on port 1883.
+1765452951: New client connected from 127.0.0.1:38092 as healthcheck (p2, c1, k60).
+1765452951: No will message specified.
+1765452951: Sending CONNACK to healthcheck (0, 0)
+1765452951: Received SUBSCRIBE from healthcheck
+1765452951: 	/# (QoS 0)
+1765452951: healthcheck 0 /#
+1765452951: Sending SUBACK to healthcheck
+1765452954: Received DISCONNECT from healthcheck
+1765452954: Client healthcheck disconnected.
+1765452964: New connection from 127.0.0.1:38390 on port 1883.
+1765452964: New client connected from 127.0.0.1:38390 as healthcheck (p2, c1, k60).
+1765452964: No will message specified.
+1765452964: Sending CONNACK to healthcheck (0, 0)
+1765452964: Received SUBSCRIBE from healthcheck
+1765452964: 	/# (QoS 0)
+1765452964: healthcheck 0 /#
+1765452964: Sending SUBACK to healthcheck
+1765452967: Received DISCONNECT from healthcheck
+1765452967: Client healthcheck disconnected.
+1765452970: Received PINGREQ from mqttjs_ba20ed01
+1765452970: Sending PINGRESP to mqttjs_ba20ed01
+1765452977: New connection from 127.0.0.1:56262 on port 1883.
+1765452977: New client connected from 127.0.0.1:56262 as healthcheck (p2, c1, k60).
+1765452977: No will message specified.
+1765452977: Sending CONNACK to healthcheck (0, 0)
+1765452977: Received SUBSCRIBE from healthcheck
+1765452977: 	/# (QoS 0)
+1765452977: healthcheck 0 /#
+1765452977: Sending SUBACK to healthcheck
+1765452980: Received DISCONNECT from healthcheck
+1765452980: Client healthcheck disconnected.
+1765452990: New connection from 127.0.0.1:58104 on port 1883.
+1765452990: New client connected from 127.0.0.1:58104 as healthcheck (p2, c1, k60).
+1765452990: No will message specified.
+1765452990: Sending CONNACK to healthcheck (0, 0)
+1765452990: Received SUBSCRIBE from healthcheck
+1765452990: 	/# (QoS 0)
+1765452990: healthcheck 0 /#
+1765452990: Sending SUBACK to healthcheck
+1765452993: Received DISCONNECT from healthcheck
+1765452993: Client healthcheck disconnected.
+1765453004: New connection from 127.0.0.1:52982 on port 1883.
+1765453004: New client connected from 127.0.0.1:52982 as healthcheck (p2, c1, k60).
+1765453004: No will message specified.
+1765453004: Sending CONNACK to healthcheck (0, 0)
+1765453004: Received SUBSCRIBE from healthcheck
+1765453004: 	/# (QoS 0)
+1765453004: healthcheck 0 /#
+1765453004: Sending SUBACK to healthcheck
+1765453007: Received DISCONNECT from healthcheck
+1765453007: Client healthcheck disconnected.
+1765453017: New connection from 127.0.0.1:54902 on port 1883.
+1765453017: New client connected from 127.0.0.1:54902 as healthcheck (p2, c1, k60).
+1765453017: No will message specified.
+1765453017: Sending CONNACK to healthcheck (0, 0)
+1765453017: Received SUBSCRIBE from healthcheck
+1765453017: 	/# (QoS 0)
+1765453017: healthcheck 0 /#
+1765453017: Sending SUBACK to healthcheck
+1765453020: Received DISCONNECT from healthcheck
+1765453020: Client healthcheck disconnected.
+1765453030: New connection from 127.0.0.1:33732 on port 1883.
+1765453030: New client connected from 127.0.0.1:33732 as healthcheck (p2, c1, k60).
+1765453030: No will message specified.
+1765453030: Sending CONNACK to healthcheck (0, 0)
+1765453030: Received SUBSCRIBE from healthcheck
+1765453030: 	/# (QoS 0)
+1765453030: healthcheck 0 /#
+1765453030: Sending SUBACK to healthcheck
+1765453030: Received PINGREQ from mqttjs_ba20ed01
+1765453030: Sending PINGRESP to mqttjs_ba20ed01
+1765453033: Received DISCONNECT from healthcheck
+1765453033: Client healthcheck disconnected.
+1765453043: New connection from 127.0.0.1:34262 on port 1883.
+1765453043: New client connected from 127.0.0.1:34262 as healthcheck (p2, c1, k60).
+1765453043: No will message specified.
+1765453043: Sending CONNACK to healthcheck (0, 0)
+1765453043: Received SUBSCRIBE from healthcheck
+1765453043: 	/# (QoS 0)
+1765453043: healthcheck 0 /#
+1765453043: Sending SUBACK to healthcheck
+1765453046: Received DISCONNECT from healthcheck
+1765453046: Client healthcheck disconnected.
+1765453056: New connection from 127.0.0.1:40296 on port 1883.
+1765453056: New client connected from 127.0.0.1:40296 as healthcheck (p2, c1, k60).
+1765453056: No will message specified.
+1765453056: Sending CONNACK to healthcheck (0, 0)
+1765453056: Received SUBSCRIBE from healthcheck
+1765453056: 	/# (QoS 0)
+1765453056: healthcheck 0 /#
+1765453056: Sending SUBACK to healthcheck
+1765453059: Received DISCONNECT from healthcheck
+1765453059: Client healthcheck disconnected.
+1765453069: New connection from 127.0.0.1:55490 on port 1883.
+1765453069: New client connected from 127.0.0.1:55490 as healthcheck (p2, c1, k60).
+1765453069: No will message specified.
+1765453069: Sending CONNACK to healthcheck (0, 0)
+1765453069: Received SUBSCRIBE from healthcheck
+1765453069: 	/# (QoS 0)
+1765453069: healthcheck 0 /#
+1765453069: Sending SUBACK to healthcheck
+1765453072: Received DISCONNECT from healthcheck
+1765453072: Client healthcheck disconnected.
+1765453082: New connection from 127.0.0.1:46354 on port 1883.
+1765453082: New client connected from 127.0.0.1:46354 as healthcheck (p2, c1, k60).
+1765453082: No will message specified.
+1765453082: Sending CONNACK to healthcheck (0, 0)
+1765453082: Received SUBSCRIBE from healthcheck
+1765453082: 	/# (QoS 0)
+1765453082: healthcheck 0 /#
+1765453082: Sending SUBACK to healthcheck
+1765453085: Received DISCONNECT from healthcheck
+1765453085: Client healthcheck disconnected.
+1765453090: Received PINGREQ from mqttjs_ba20ed01
+1765453090: Sending PINGRESP to mqttjs_ba20ed01
+1765453095: New connection from 127.0.0.1:46948 on port 1883.
+1765453095: New client connected from 127.0.0.1:46948 as healthcheck (p2, c1, k60).
+1765453095: No will message specified.
+1765453095: Sending CONNACK to healthcheck (0, 0)
+1765453095: Received SUBSCRIBE from healthcheck
+1765453095: 	/# (QoS 0)
+1765453095: healthcheck 0 /#
+1765453095: Sending SUBACK to healthcheck
+1765453098: Received DISCONNECT from healthcheck
+1765453098: Client healthcheck disconnected.
+1765453108: New connection from 127.0.0.1:58316 on port 1883.
+1765453108: New client connected from 127.0.0.1:58316 as healthcheck (p2, c1, k60).
+1765453108: No will message specified.
+1765453108: Sending CONNACK to healthcheck (0, 0)
+1765453108: Received SUBSCRIBE from healthcheck
+1765453108: 	/# (QoS 0)
+1765453108: healthcheck 0 /#
+1765453108: Sending SUBACK to healthcheck
+1765453111: Received DISCONNECT from healthcheck
+1765453111: Client healthcheck disconnected.
+1765453121: New connection from 127.0.0.1:43326 on port 1883.
+1765453121: New client connected from 127.0.0.1:43326 as healthcheck (p2, c1, k60).
+1765453121: No will message specified.
+1765453121: Sending CONNACK to healthcheck (0, 0)
+1765453121: Received SUBSCRIBE from healthcheck
+1765453121: 	/# (QoS 0)
+1765453121: healthcheck 0 /#
+1765453121: Sending SUBACK to healthcheck
+1765453124: Received DISCONNECT from healthcheck
+1765453124: Client healthcheck disconnected.
+1765453134: New connection from 127.0.0.1:53830 on port 1883.
+1765453134: New client connected from 127.0.0.1:53830 as healthcheck (p2, c1, k60).
+1765453134: No will message specified.
+1765453134: Sending CONNACK to healthcheck (0, 0)
+1765453134: Received SUBSCRIBE from healthcheck
+1765453134: 	/# (QoS 0)
+1765453134: healthcheck 0 /#
+1765453134: Sending SUBACK to healthcheck
+1765453137: Received DISCONNECT from healthcheck
+1765453137: Client healthcheck disconnected.
+1765453147: New connection from 127.0.0.1:36504 on port 1883.
+1765453147: New client connected from 127.0.0.1:36504 as healthcheck (p2, c1, k60).
+1765453147: No will message specified.
+1765453147: Sending CONNACK to healthcheck (0, 0)
+1765453147: Received SUBSCRIBE from healthcheck
+1765453147: 	/# (QoS 0)
+1765453147: healthcheck 0 /#
+1765453147: Sending SUBACK to healthcheck
+1765453150: Received PINGREQ from mqttjs_ba20ed01
+1765453150: Sending PINGRESP to mqttjs_ba20ed01
+1765453150: Received DISCONNECT from healthcheck
+1765453150: Client healthcheck disconnected.
+1765453160: New connection from 127.0.0.1:53926 on port 1883.
+1765453160: New client connected from 127.0.0.1:53926 as healthcheck (p2, c1, k60).
+1765453160: No will message specified.
+1765453160: Sending CONNACK to healthcheck (0, 0)
+1765453160: Received SUBSCRIBE from healthcheck
+1765453160: 	/# (QoS 0)
+1765453160: healthcheck 0 /#
+1765453160: Sending SUBACK to healthcheck
+1765453163: Received DISCONNECT from healthcheck
+1765453163: Client healthcheck disconnected.
+1765453173: New connection from 127.0.0.1:44446 on port 1883.
+1765453173: New client connected from 127.0.0.1:44446 as healthcheck (p2, c1, k60).
+1765453173: No will message specified.
+1765453173: Sending CONNACK to healthcheck (0, 0)
+1765453173: Received SUBSCRIBE from healthcheck
+1765453173: 	/# (QoS 0)
+1765453173: healthcheck 0 /#
+1765453173: Sending SUBACK to healthcheck
+1765453176: Received DISCONNECT from healthcheck
+1765453176: Client healthcheck disconnected.
+1765453186: New connection from 127.0.0.1:51726 on port 1883.
+1765453186: New client connected from 127.0.0.1:51726 as healthcheck (p2, c1, k60).
+1765453186: No will message specified.
+1765453186: Sending CONNACK to healthcheck (0, 0)
+1765453186: Received SUBSCRIBE from healthcheck
+1765453186: 	/# (QoS 0)
+1765453186: healthcheck 0 /#
+1765453186: Sending SUBACK to healthcheck
+1765453189: Received DISCONNECT from healthcheck
+1765453189: Client healthcheck disconnected.
+1765453199: New connection from 127.0.0.1:52510 on port 1883.
+1765453199: New client connected from 127.0.0.1:52510 as healthcheck (p2, c1, k60).
+1765453199: No will message specified.
+1765453199: Sending CONNACK to healthcheck (0, 0)
+1765453199: Received SUBSCRIBE from healthcheck
+1765453199: 	/# (QoS 0)
+1765453199: healthcheck 0 /#
+1765453199: Sending SUBACK to healthcheck
+1765453202: Received DISCONNECT from healthcheck
+1765453202: Client healthcheck disconnected.
+1765453210: Received PINGREQ from mqttjs_ba20ed01
+1765453210: Sending PINGRESP to mqttjs_ba20ed01
+1765453212: New connection from 127.0.0.1:41050 on port 1883.
+1765453212: New client connected from 127.0.0.1:41050 as healthcheck (p2, c1, k60).
+1765453212: No will message specified.
+1765453212: Sending CONNACK to healthcheck (0, 0)
+1765453212: Received SUBSCRIBE from healthcheck
+1765453212: 	/# (QoS 0)
+1765453212: healthcheck 0 /#
+1765453212: Sending SUBACK to healthcheck
+1765453215: Received DISCONNECT from healthcheck
+1765453215: Client healthcheck disconnected.
+1765453226: New connection from 127.0.0.1:52918 on port 1883.
+1765453226: New client connected from 127.0.0.1:52918 as healthcheck (p2, c1, k60).
+1765453226: No will message specified.
+1765453226: Sending CONNACK to healthcheck (0, 0)
+1765453226: Received SUBSCRIBE from healthcheck
+1765453226: 	/# (QoS 0)
+1765453226: healthcheck 0 /#
+1765453226: Sending SUBACK to healthcheck
+1765453229: Received DISCONNECT from healthcheck
+1765453229: Client healthcheck disconnected.
+1765453239: New connection from 127.0.0.1:37512 on port 1883.
+1765453239: New client connected from 127.0.0.1:37512 as healthcheck (p2, c1, k60).
+1765453239: No will message specified.
+1765453239: Sending CONNACK to healthcheck (0, 0)
+1765453239: Received SUBSCRIBE from healthcheck
+1765453239: 	/# (QoS 0)
+1765453239: healthcheck 0 /#
+1765453239: Sending SUBACK to healthcheck
+1765453242: Received DISCONNECT from healthcheck
+1765453242: Client healthcheck disconnected.
+1765453252: New connection from 127.0.0.1:40874 on port 1883.
+1765453252: New client connected from 127.0.0.1:40874 as healthcheck (p2, c1, k60).
+1765453252: No will message specified.
+1765453252: Sending CONNACK to healthcheck (0, 0)
+1765453252: Received SUBSCRIBE from healthcheck
+1765453252: 	/# (QoS 0)
+1765453252: healthcheck 0 /#
+1765453252: Sending SUBACK to healthcheck
+1765453255: Received DISCONNECT from healthcheck
+1765453255: Client healthcheck disconnected.
+1765453265: New connection from 127.0.0.1:58306 on port 1883.
+1765453265: New client connected from 127.0.0.1:58306 as healthcheck (p2, c1, k60).
+1765453265: No will message specified.
+1765453265: Sending CONNACK to healthcheck (0, 0)
+1765453265: Received SUBSCRIBE from healthcheck
+1765453265: 	/# (QoS 0)
+1765453265: healthcheck 0 /#
+1765453265: Sending SUBACK to healthcheck
+1765453268: Received DISCONNECT from healthcheck
+1765453268: Client healthcheck disconnected.
+1765453270: Received PINGREQ from mqttjs_ba20ed01
+1765453270: Sending PINGRESP to mqttjs_ba20ed01
+1765453278: New connection from 127.0.0.1:43544 on port 1883.
+1765453278: New client connected from 127.0.0.1:43544 as healthcheck (p2, c1, k60).
+1765453278: No will message specified.
+1765453278: Sending CONNACK to healthcheck (0, 0)
+1765453278: Received SUBSCRIBE from healthcheck
+1765453278: 	/# (QoS 0)
+1765453278: healthcheck 0 /#
+1765453278: Sending SUBACK to healthcheck
+1765453281: Received DISCONNECT from healthcheck
+1765453281: Client healthcheck disconnected.
+1765453291: New connection from 127.0.0.1:37292 on port 1883.
+1765453291: New client connected from 127.0.0.1:37292 as healthcheck (p2, c1, k60).
+1765453291: No will message specified.
+1765453291: Sending CONNACK to healthcheck (0, 0)
+1765453291: Received SUBSCRIBE from healthcheck
+1765453291: 	/# (QoS 0)
+1765453291: healthcheck 0 /#
+1765453291: Sending SUBACK to healthcheck
+1765453294: Received DISCONNECT from healthcheck
+1765453294: Client healthcheck disconnected.
+1765453304: New connection from 127.0.0.1:49808 on port 1883.
+1765453304: New client connected from 127.0.0.1:49808 as healthcheck (p2, c1, k60).
+1765453304: No will message specified.
+1765453304: Sending CONNACK to healthcheck (0, 0)
+1765453304: Received SUBSCRIBE from healthcheck
+1765453304: 	/# (QoS 0)
+1765453304: healthcheck 0 /#
+1765453304: Sending SUBACK to healthcheck
+1765453307: Received DISCONNECT from healthcheck
+1765453307: Client healthcheck disconnected.
+1765453529: New connection from 127.0.0.1:40802 on port 1883.
+1765453529: New client connected from 127.0.0.1:40802 as healthcheck (p2, c1, k60).
+1765453529: No will message specified.
+1765453529: Sending CONNACK to healthcheck (0, 0)
+1765453529: Received SUBSCRIBE from healthcheck
+1765453529: 	/# (QoS 0)
+1765453529: healthcheck 0 /#
+1765453529: Sending SUBACK to healthcheck
+1765453532: Received DISCONNECT from healthcheck
+1765453532: Client healthcheck disconnected.
+1765453542: Received PINGREQ from mqttjs_ba20ed01
+1765453542: Sending PINGRESP to mqttjs_ba20ed01
+1765453542: New connection from 127.0.0.1:36052 on port 1883.
+1765453542: New client connected from 127.0.0.1:36052 as healthcheck (p2, c1, k60).
+1765453542: No will message specified.
+1765453542: Sending CONNACK to healthcheck (0, 0)
+1765453542: Received SUBSCRIBE from healthcheck
+1765453542: 	/# (QoS 0)
+1765453542: healthcheck 0 /#
+1765453542: Sending SUBACK to healthcheck
+1765453545: Received DISCONNECT from healthcheck
+1765453545: Client healthcheck disconnected.
+1765453555: New connection from 127.0.0.1:34508 on port 1883.
+1765453555: New client connected from 127.0.0.1:34508 as healthcheck (p2, c1, k60).
+1765453555: No will message specified.
+1765453555: Sending CONNACK to healthcheck (0, 0)
+1765453555: Received SUBSCRIBE from healthcheck
+1765453555: 	/# (QoS 0)
+1765453555: healthcheck 0 /#
+1765453555: Sending SUBACK to healthcheck
+1765453558: Received DISCONNECT from healthcheck
+1765453558: Client healthcheck disconnected.
+1765453568: New connection from 127.0.0.1:47496 on port 1883.
+1765453568: New client connected from 127.0.0.1:47496 as healthcheck (p2, c1, k60).
+1765453568: No will message specified.
+1765453568: Sending CONNACK to healthcheck (0, 0)
+1765453568: Received SUBSCRIBE from healthcheck
+1765453568: 	/# (QoS 0)
+1765453568: healthcheck 0 /#
+1765453568: Sending SUBACK to healthcheck
+1765453571: Received DISCONNECT from healthcheck
+1765453571: Client healthcheck disconnected.
